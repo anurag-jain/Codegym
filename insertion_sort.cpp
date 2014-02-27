@@ -1,3 +1,10 @@
+/*
+Insertion Sort
+Time Complexity: O(n^2)
+Auxilary Space: O(1)
+Boundary Cases: worst case when array is sorted in reverse.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -38,6 +45,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	char *endPtr;
+	double total_time;
 	long numElement = strtol(argv[1], &endPtr, 0);
 	if(numElement == 0)
 		numElement=DEFAULT_INPUT_SIZE;
@@ -49,11 +57,15 @@ int main(int argc, char *argv[])
 	srand(time(NULL));
 	while(numElement--)
 	{
-		printf("%ld\n", numElement);
 		inputVector.push_back(rand()%32767);
 	}
 
+	clock_t start_time = clock();
 	insertSort(inputVector);
+	clock_t end_time = clock() - start_time;
+
+	printf("The total for insertSort: %ld click or (%f seconds)\n", end_time, ((double)end_time) / CLOCKS_PER_SEC );
+
 
 	for (int i = 0; i < inputVector.size(); ++i)
 	{
