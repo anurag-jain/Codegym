@@ -3,6 +3,7 @@ Insertion Sort
 Time Complexity: O(n^2)
 Auxilary Space: O(1)
 Boundary Cases: worst case when array is sorted in reverse.
+Insertion sort is uses when number of elements is small. It can also be useful when input array is almost sorted, only few elements are misplaced in complete big array.
 */
 
 #include <stdio.h>
@@ -35,8 +36,6 @@ void insertSort(vector<T> &vec)
 	}
 }
 
-
-
 int main(int argc, char *argv[])
 {
 	if(argc != 2)
@@ -66,13 +65,10 @@ int main(int argc, char *argv[])
 
 	printf("The total for insertSort: %ld click or (%f seconds)\n", end_time, ((double)end_time) / CLOCKS_PER_SEC );
 
-
 	for (int i = 0; i < inputVector.size(); ++i)
 	{
 		printf("%d\n", inputVector[i]);
 	}
-
-
 
 	return 0;
 }
