@@ -13,8 +13,6 @@ The good thing about selection sort is it never makes O(n) swaps and can be usef
 #include <iterator>
 #define DEFAULT_INPUT_SIZE 10
 
-#define DEFAULT_INPUT_SIZE 10
-
 using namespace std;
 
 template <class T>
