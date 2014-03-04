@@ -3,24 +3,27 @@ Codegym
 Algorithm Practice
 -------------------
 
-1: Code all standard algorithms
+<b>1: Code all standard algorithms.
 
-Sorting
+<b>Sorting:
+
 	Insertion Sort - Done
 	Selection Sort - Done
 	Quick Sort - Done
 	Merge Sort
 	Heap Sort
-	Bubble Sort
 
+	Bubble Sort
 	Radix Sort
 	Bucket Sort
 	Counting Sort
 
-Searching
+<b>Searching:
+
 	Binary Search
 
-Elementary Data Structure
+<b>Elementary Data Structure:
+
 	Stack
 		push
 		pop
