@@ -16,10 +16,8 @@ Insertion sort is uses when number of elements is small. It can also be useful w
 
 #define DEFAULT_INPUT_SIZE 10
 
-using namespace std;
-
 template <class T>
-void insertSort(vector<T> &vec)
+void insertSort(std::vector<T> &vec)
 {
 	T pivot;
 	int j;
@@ -40,7 +38,7 @@ int main(int argc, char *argv[])
 {
 	if(argc != 2)
 	{
-		cout<<"USAGE: insertion_sort <number of elements>"<<endl;
+		std::cout<<"USAGE: insertion_sort <number of elements>"<<std::endl;
 		exit(1);
 	}
 	char *endPtr;

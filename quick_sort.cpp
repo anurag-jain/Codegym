@@ -14,10 +14,17 @@ Although the worst case time complexity of QuickSort is O(n2) which is more than
 #include <iterator>
 #define DEFAULT_INPUT_SIZE 10
 
-using namespace std;
+template <class T>
+void swap(T &A, T &B)
+{
+	T temp;
+	temp=A;
+	A=B;
+	B=temp;
+}
 
 template <class T, class T1>
-void quickSort(vector<T> &vec, T1 start, T1 end)
+void quickSort(std::vector<T> &vec, T1 start, T1 end)
 {
 	if(start < end)
 	{
@@ -28,7 +35,7 @@ void quickSort(vector<T> &vec, T1 start, T1 end)
 }
 
 template <class T, class T1>
-int partition(vector<T>&A,T1 start, T1 end)
+int partition(std::vector<T>&A,T1 start, T1 end)
 {
 	T1 pivot = start;
 	T1 i=pivot+1;
@@ -52,20 +59,13 @@ int partition(vector<T>&A,T1 start, T1 end)
 	return i-1;
 }
 
-template <class T>
-void swap(T &A, T &B)
-{
-	T temp;
-	temp=A;
-	A=B;
-	B=temp;
-}
+
 
 int main(int argc, char *argv[])
 {
 	if(argc != 2)
 	{
-		cout<<"USAGE: insertion_sort <number of elements>"<<endl;
+		std::cout<<"USAGE: insertion_sort <number of elements>"<<std::endl;
 		exit(1);
 	}
 	char *endPtr;
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 	}
 
 	clock_t start_time = clock();
-	quickSort(inputVector, 0, (int)numElement-1);
+	quickSort(inputVector, 0l, numElement-1);
 	clock_t end_time = clock() - start_time;
 
 	printf("The total for quickSort: %ld click or (%f seconds)\n", end_time, ((double)end_time) / CLOCKS_PER_SEC );

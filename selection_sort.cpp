@@ -13,10 +13,9 @@ The good thing about selection sort is it never makes O(n) swaps and can be usef
 #include <iterator>
 #define DEFAULT_INPUT_SIZE 10
 
-using namespace std;
 
 template <class T>
-void selectionSort(vector<T> &vec)
+void selectionSort(std::vector<T> &vec)
 {
 	T min;
 	for(long i=0; i<vec.size();i++)
@@ -38,7 +37,7 @@ int main(int argc, char *argv[])
 {
 	if(argc != 2)
 	{
-		cout<<"USAGE: insertion_sort <number of elements>"<<endl;
+		std::cout<<"USAGE: insertion_sort <number of elements>"<<std::endl;
 		exit(1);
 	}
 	char *endPtr;

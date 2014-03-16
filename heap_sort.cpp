@@ -13,10 +13,9 @@
 #include <iterator>
 #define DEFAULT_INPUT_SIZE 10
 
-using namespace std;
 
 template <class T>
-void maxHeapify(vector<T> &vec, long i, long end)
+void maxHeapify(std::vector<T> &vec, long i, long end)
 {
 	long max=i;
 	long left = 2*i+1;
@@ -36,7 +35,7 @@ void maxHeapify(vector<T> &vec, long i, long end)
 }
 
 template <class T>
-void buildHeap(vector<T> &vec)
+void buildHeap(std::vector<T> &vec)
 {
 	long inputLen = (long)vec.size();
 	for(long i=(inputLen - (long)2)/2;i>=0;--i)
@@ -44,7 +43,7 @@ void buildHeap(vector<T> &vec)
 }
 
 template <class T>
-void heapSort(vector<T> &vec , long start,  long end)
+void heapSort(std::vector<T> &vec , long start,  long end)
 {
 	buildHeap(vec);
 	for(long i=end;i>0l;--i)
@@ -66,12 +65,11 @@ void swap(T& A, T& B)
 }
 
 
-
 int main(int argc, char *argv[])
 {
 	if(argc != 2)
 	{
-		cout<<"USAGE: heap_sort <number of elements>"<<endl;
+		std::cout<<"USAGE: heap_sort <number of elements>"<<std::endl;
 		exit(1);
 	}
 	char *endPtr;
@@ -79,7 +77,7 @@ int main(int argc, char *argv[])
 	if(numElement == 0)
 		numElement=DEFAULT_INPUT_SIZE;
 
-	vector<int> inputVector;
+	std::vector<int> inputVector;
 
 	//inputVector.reserve(numElement);
 

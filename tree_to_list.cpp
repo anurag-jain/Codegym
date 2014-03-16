@@ -12,7 +12,6 @@
 #include <vector>
 #include <iterator>
 
-using namespace std;
 
 struct node
 {
