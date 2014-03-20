@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 	heapSort(inputVector, 0l, numElement-1);
 	clock_t end_time = clock() - start_time;
 
-	printf("The total for heapSort: %ld click or (%f seconds)\n", end_time, ((double)end_time) / CLOCKS_PER_SEC );
+	printf("The total time for heapSort: %ld click or (%f seconds)\n", end_time, ((double)end_time) / CLOCKS_PER_SEC );
 
 	for (int i = 0; i < inputVector.size(); ++i)
 	{
